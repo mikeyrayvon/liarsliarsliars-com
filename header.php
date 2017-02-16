@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
-		
+
 		<meta property="og:image" content="<?php the_field('fb_image', 49); ?>"/>
 		<meta property="og:title" content="<?php bloginfo('name'); ?>"/>
 		<meta property="og:description" content="<?php the_field('fb_description', 49); ?>" />
@@ -38,40 +38,26 @@
 	<body <?php body_class(); ?>>
 
 	<!-- header -->
-	<header class="header clear" role="banner">
-
-		<!-- logo -->
-		<div class="logo">
-			<a href="<?php echo home_url(); ?>">
-						
-		</a>
-			</div>
-		<!-- /logo -->
+	<header id="header">
 
 		<!-- nav -->
 		<nav class="nav" role="navigation">
 			<div class="menu">
 				<ul>
-					<span>
-					<li>
-						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/nav_liars.png" />
-						</a>
-					</li>
+					<li><h1 id="site-title"><a href="<?php echo home_url(); ?>">LIARS</a></h1></li>
 					<li><a id="tourbtn">TOUR</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/?page_id=25">DISCOG</a></li>
-					</span><span>
 					<li><a href="<?php bloginfo('url'); ?>/?page_id=14">VIDEO</a></li>
 					<li><a href="http://liars.inktankmerch.com/" target="_blank">SHOP</a></li>
-					</span><span id="navsoc">
-					<li><a href="https://www.facebook.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.png" /></a></li>	
-					<li><a href="https://twitter.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/twitter.png" /></a></li>	
+					<span id="navsoc">
+					<li><a href="https://www.facebook.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.png" /></a></li>
+					<li><a href="https://twitter.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/twitter.png" /></a></li>
 					<li><a href="http://instagram.com/liarsliarsliars" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/instagram.png" /></a></li>
-					<li><a href="http://www.youtube.com/user/liarsliarsliars" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/youtube.png" /></a></li>	
-					<li><a href="http://amateurgore.tumblr.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/tumblr.png" /></a></li>	
-					<li><a href="https://soundcloud.com/liarsliarsliars" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/soundcloud.png" /></a></li>	
-					<li><a href="https://play.spotify.com/artist/2z78AlkdwE2Ghj9EB50M6z" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/spotify.png" /></a></li>	
-					</span>				
+					<li><a href="http://www.youtube.com/user/liarsliarsliars" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/youtube.png" /></a></li>
+					<li><a href="http://amateurgore.tumblr.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/tumblr.png" /></a></li>
+					<li><a href="https://soundcloud.com/liarsliarsliars" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/soundcloud.png" /></a></li>
+					<li><a href="https://play.spotify.com/artist/2z78AlkdwE2Ghj9EB50M6z" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/spotify.png" /></a></li>
+					</span>
 				</ul>
 			</div>
 		</nav>
@@ -89,5 +75,3 @@
 		<a href="https://www.bandsintown.com/Liars" class="bit-widget-initializer bigtour" data-artist="Liars" data-prefix="fbjs" data-notify-me="false" data-share-links="false" data-facebook-comments="false" data-text-color="#111111" data-link-color="#111111" data-bg-color="#fdfdfd" >Bandsintown</a>
 	</div>
 	<!-- /tour -->
-
-	

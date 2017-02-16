@@ -1,9 +1,9 @@
 // DOM Ready
 $(function() {
 
-	var windowWidth = $(window).width(); 
-	var windowHeight = $(window).height(); 
-	
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+
 	var body = $('body');
 	var header= $('header');
 	var nav= $('.nav');
@@ -14,7 +14,7 @@ $(function() {
     var news = $('.news');
     var promo = $('.promo');
     var insta = $('#instagram');
-    
+
     var newstop = 0;
     var instatop = 0;
     var promotop = 0;
@@ -24,14 +24,14 @@ $(function() {
 
 	var navWidth = nav.outerWidth();
 	var navHeight = nav.outerHeight();
-	
-	var hometop = 100; 
-	
+
+	var hometop = 100;
+
 	var coverheight = 0;
 
-//position wrapper	
-wrapper.css({'margin-top':hometop}); 
-	
+//position wrapper
+//wrapper.css({'margin-top':hometop}); 
+
 //begin tourbox
 tourbtn.click(function () {
     tour.fadeIn( "slow" );
@@ -54,19 +54,19 @@ tourclose.click(function () {
 $('.album-video iframe').attr('height', '100%').attr('width', '100%');
 
 if (windowWidth < 768) {
-		
+
 	$(".album-spotify").contents().find("#outerWidgetContainer").css('width','100%');
 		$('.album-spotify iframe').attr('width','100%');
-		console.log('done'); 
+		console.log('done');
 	}
 if (windowWidth > 769) {
 		console.log('done2');
 	}
-if (windowWidth > 1024) { 
+if (windowWidth > 1024) {
 		$('.album-video').css('height', (windowHeight*0.7)+40);
 		coverheight = $('.wp-post-image').height();
 		console.log(coverheight);
-		
+
 	}
 
 

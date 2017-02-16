@@ -1,9 +1,9 @@
 // DOM Ready
 $(function() {
 
-	var windowWidth = $(window).width(); 
-	var windowHeight = $(window).height(); 
-	
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+
 	var body = $('body');
 	var header= $('header');
 	var nav= $('.nav');
@@ -14,7 +14,7 @@ $(function() {
     var news = $('.news');
     var promo = $('.promo');
     var insta = $('#instagram');
-    
+
     var newstop = 0;
     var instatop = 0;
     var promotop = 0;
@@ -24,12 +24,12 @@ $(function() {
 
 	var navWidth = nav.outerWidth();
 	var navHeight = nav.outerHeight();
-	
-	var hometop = 100; 
 
-//position wrapper	
-wrapper.css({'margin-top':hometop}); 
-	
+	var hometop = 100;
+
+//position wrapper
+//wrapper.css({'margin-top':hometop}); 
+
 //begin tourbox
 tourbtn.click(function () {
     tour.fadeIn( "slow" );

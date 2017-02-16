@@ -1,6 +1,6 @@
 /*
 	Theme Name: Liars
-	Theme URI: 
+	Theme URI:
 	Description: Liars Theme 2014
 	Version: 1.0
 	Author: Michael Ray-Von
@@ -13,7 +13,7 @@
 
 /*------------------------------------*\
     MAIN
-    
+
 'swis721_lt_btlight'
 'swis721_lt_btlight_italic';
 'swis721_md_btmedium';
@@ -109,6 +109,12 @@ ul {
 a.post-edit-link {
 	background: #fdfdfd;
 	}
+#site-title {
+	display: inline;
+	margin: 0;
+	font-size: 0;
+	font-weight: 300;
+}
 
 /*------------------------------------*\
     STRUCTURE
@@ -122,7 +128,7 @@ a.post-edit-link {
 	position: fixed;
 	background-image: url('img/mess_cover_bg.jpg');
 	background-size: cover;
-	background-position:center; 
+	background-position:center;
 	background-repeat: no-repeat;
 	z-index: -1;
 	}
@@ -158,8 +164,13 @@ a.post-edit-link {
 	position: relative;
 	display: block;
 	float: left;
-	border-top: 4px #111 solid;
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat;
 	}
+body.home #wrap {
+	min-height: 100%
+}
 
 /* tour */
 .tour{
@@ -190,21 +201,25 @@ a.post-edit-link {
 
 /* wrapper */
 .wrapper {
-	max-width:1280px;
-	width:95%;
-	margin:0 auto;
+	max-width: 1280px;
+	width: 90%;
+	margin: 100px auto;
 	position:relative;
-	margin-left: 2.5%;
 	height: auto;
-	float: left;
-	margin-bottom: 10%;
+}
+body.home .wrapper {
+	margin: 50px auto;
 }
 main {
 
 	}
 /* header */
-.header {
-
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
 }
 /* logo */
 .logo {
@@ -219,13 +234,11 @@ main {
 	z-index: 4;
 	position: fixed;
 	width: 100%;
+	text-align: center;
 	}
-	
+
 .nav .menu {
-	position: absolute;
 	display: inline-block;
-	left: 50%;
-	margin-left: -387px;
 	}
 
 .nav .menu ul {
@@ -238,7 +251,7 @@ main {
 	display: inline-block;
 	float: left;
 	}
-	
+
 .nav li a:link, a#tourbtn {
 	font-size: 24px;
 	color: #111;
@@ -275,7 +288,22 @@ a#tourbtn:hover, .nav li a:hover {
 	left: 0;
 	top: 0;
 }
-	
+
+/*home videos*/
+#home-videos-section {
+	text-align: center;
+}
+#home-videos-section ul {
+	list-style: none;
+}
+.home-video {
+	text-align: center;
+	margin: 0 auto;
+}
+.home-video iframe {
+	max-width: 100%
+}
+
 /*buy mess*/
 .buymess {
 	height: auto;
@@ -289,8 +317,8 @@ a#tourbtn:hover, .nav li a:hover {
 	padding: 20px;
 	float: left;
 	}
-	
-/* news */	
+
+/* news */
 .news {
 	width:50%;
 	left:0;
@@ -305,9 +333,9 @@ a#tourbtn:hover, .nav li a:hover {
 	float: left;
 	width: 100%;
 	position: relative;
-	
+
 }
-	
+
 .news article .date {
 	font: 12px 'swis721_lt_btlight_italic';
 	margin-bottom: 5%;
@@ -378,11 +406,11 @@ section.single-news article img {
 	display: block;
 	pointer-events: none;
 	}
-	
-	
 
-	
-	
+
+
+
+
 /* video */
 .promo {
 	width: 100%;
@@ -394,14 +422,14 @@ section.single-news article img {
 	padding: 2%;
 	background: #111;
 	}
-	
+
 /* soundcloud */
 .soundcloud {
 padding: 3%;
 background: #fdfdfd;
 border: 4px solid #111;
 }
-	
+
 /* instagram */
 #instagram {
 	right: 0;
@@ -442,7 +470,7 @@ border: 4px solid #111;
 	border: 1px #111 solid;
 	}
 .instacap:empty {visibility: hidden;}
-	
+
 
 /* tour */
 .bit-widget-container {
@@ -505,7 +533,7 @@ footer > ul > li:before {
 	width: 100%;
 	text-align: center;
 	margin-bottom: 10%;
-}	
+}
 .page-title h1 {
 	background: #fdfdfd;
 	display: inline-block;
@@ -518,11 +546,10 @@ footer > ul > li:before {
 
 /* discog */
 article.discog {
-	width: 80%;
-	margin-left: 10%;
+	width: 90%;
+	margin-left: 5%;
 	height: 400px;
 	position: relative;
-	float: left;
 	margin-bottom: 10%;
 }
 article.discog img {
@@ -544,7 +571,6 @@ article.discog img {
 	border: 1px #111 solid;
 	}
 .timeline {
-	float: left;
 	border: #111 solid;
 	border-width: 4px 0 4px 4px;
 	width: 5%;
@@ -552,7 +578,7 @@ article.discog img {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 10%;
+	left: 5%;
 	}
 .datepeg{
 width: 2.5%;
@@ -565,7 +591,7 @@ z-index: 0;
 	article.discog .section-title h2 {
 		max-width: 60%;
 	}
-	
+
 section.single-discog article {
 	height: auto;
 	}
@@ -622,23 +648,26 @@ div.album-buy img, section.single-discog article div.album-buy img {
 .buymess div.buy-links {
 	border: 0;
 	}
-	
+
 /* video */
 article.video {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	position: relative;
-	float: left;
-	margin-bottom: 10%;
-	width: 100%;
+	margin: 0 auto 10%;
 	border: 4px solid #111;
-	}
+}
 .video-embed {
-	width: 80%;
-	margin-left: 10%;
-	padding: 5% 0;
-	}
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 5% 9%;
+}
+.video-embed iframe {
+	width: 100%;
+	height: 100%;
+}
 #Video .page-title	{
 	}
 #Video .page-title	h1 {
@@ -671,6 +700,30 @@ article.video {
     RESPONSIVE
 \*------------------------------------*/
 
+@media screen and (orientation:landscape) {
+	article.video {
+		width: 106vh;
+	  height: 60vh;
+	}
+	.home-video iframe {
+	  width: 106vh;
+	  height: 60vh;
+	  margin-top: 15vh;
+	}
+}
+
+@media screen and (orientation:portrait) {
+	article.video {
+		width: 80vw;
+	  height: 45vw;
+	}
+	.home-video iframe {
+	  width: 80vw;
+	  height: 45vw;
+	  margin-top: 20vh;
+	}
+}
+
 @media only screen and (max-width:320px) {
 
 }
@@ -702,7 +755,7 @@ article.video {
 		width: 100%;
 		margin-bottom: 10%;
 	}
-	
+
 }
 @media only screen and (max-width:768px) {
 	body {
@@ -827,7 +880,7 @@ article.video {
 	.album-buy img {
 		width: 15%;
 		}
-	
+
 }
 @media only screen and (max-width:560px) {
 	.nav span#navsoc {
@@ -841,7 +894,16 @@ article.video {
 
 }
 @media only screen and (min-width:1280px) {
-
+	.home-video iframe {
+		width: 1280px;
+		height: 720px;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+	}
+	article.video {
+		width: 1280px;
+		height: 720px;
+	}
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {

@@ -1,10 +1,12 @@
 <?php /* Template Name: Homepage */ get_header(); ?>
 
+<?php if(get_field('bgimg')): ?>
 <style>
 #wrap {
 background-image: url('<?php the_field('bgimg'); ?>');
 }
 </style>
+<?php endif; ?>
 
 <!-- wrap -->
 <div id="wrap">
@@ -15,13 +17,21 @@ background-image: url('<?php the_field('bgimg'); ?>');
 	<main role="main">
 
 		<!-- section -->
-		<section class="news">
+		<section id="home-videos-section">
 
-		<?php query_posts( 'posts_per_page=5' ); ?>
+		<?php if(get_field('homepage_videos')): ?>
 
-				<?php get_template_part('loop'); ?>
+			<ul>
 
-		<?php wp_reset_query(); ?>
+			<?php while(has_sub_field('homepage_videos')): ?>
+
+				<li class="home-video"><?php the_sub_field('embed'); ?></li>
+
+			<?php endwhile; ?>
+
+			</ul>
+
+		<?php endif; ?>
 
 		</section>
 		<!-- /section -->

@@ -9,7 +9,7 @@ background-image: url('<?php the_field('bgimg', 57); ?>');
 
 <!-- wrapper -->
 	<div class="wrapper">
-	
+
 	<main role="main">
 	<!-- section -->
 	<section class="single-news">
@@ -19,7 +19,7 @@ background-image: url('<?php the_field('bgimg', 57); ?>');
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			
+
 
 			<!-- post title -->
 			<div class="page-title"><h1>
@@ -63,7 +63,7 @@ background-image: url('<?php the_field('bgimg', 57); ?>');
 	<!-- /section -->
 	</main>
 
-<!-- ?php get_sidebar(); ? -->
+<?php // get_sidebar(); ?>
 
 </div>
 <!-- /wrapper -->

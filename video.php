@@ -8,7 +8,7 @@ background-image: url('<?php the_field('bgimg'); ?>');
 
 <!-- wrapper -->
 <div class="wrapper">
-	
+
 	<main role="main">
 		<!-- section -->
 		<section id="<?php the_title(); ?>">
@@ -18,7 +18,7 @@ background-image: url('<?php the_field('bgimg'); ?>');
 		<?php query_posts( 'post_type=video'); ?>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-		
+
 			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
 			<!-- article -->
@@ -30,7 +30,7 @@ background-image: url('<?php the_field('bgimg'); ?>');
 
 				<br class="clear">
 
-				<?php edit_post_link(); ?>
+				<?php // edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
@@ -53,7 +53,6 @@ background-image: url('<?php the_field('bgimg'); ?>');
 		<!-- /section -->
 	</main>
 
-<?php // get_sidebar(); ?>
 
 </div>
 <!-- /wrapper -->

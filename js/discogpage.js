@@ -1,9 +1,9 @@
 // DOM Ready
 $(function() {
 
-	var windowWidth = $(window).width(); 
-	var windowHeight = $(window).height(); 
-	
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+
 	var body = $('body');
 	var header= $('header');
 	var nav= $('.nav');
@@ -14,7 +14,7 @@ $(function() {
     var news = $('.news');
     var promo = $('.promo');
     var insta = $('#instagram');
-    
+
     var newstop = 0;
     var instatop = 0;
     var promotop = 0;
@@ -24,15 +24,15 @@ $(function() {
 
 	var navWidth = nav.outerWidth();
 	var navHeight = nav.outerHeight();
-	
-	var hometop = 100; 
 
-//position wrapper	
-wrapper.css({'margin-top':hometop}); 
+	var hometop = 100;
+
+//position wrapper
+//wrapper.css({'margin-top':hometop}); 
 
 var blockimgheight = $('.block img').height();
 $('.block img').css('margin-top',-(blockimgheight/2));
-	
+
 //begin tourbox
 tourbtn.click(function () {
     tour.fadeIn( "slow" );
@@ -56,18 +56,18 @@ $('.promo iframe').attr('height', '100%').attr('width', '100%');
 
 //begin mobile
 if (windowWidth < 768) {
-		
+
 	var instaHeight = insta.outerWidth();
 	insta.css('height',instaHeight);
-	
-	} 
+
+	}
 //end mobile
 
 //begin browser
 if (windowWidth > 768) {
-	
+
 	$('#wrap').css('margin-top',windowHeight*1.1);
-	
+
 	insta.css('width', wrapper.width()*0.4);
 
 	$(window).scroll(function() {
@@ -77,21 +77,21 @@ if (windowWidth > 768) {
 			instascrolltop = instatop - $(window).scrollTop();
 			newstop = news.offset().top;
 			newsscrolltop = newstop - $(window).scrollTop();
-	
+
 		if ($(this).scrollTop() > windowHeight) {
             promo.css('position','fixed');
         } else {
             promo.css('position','relative');
-        } 
+        }
 
 		if (instascrolltop < hometop) {
 		insta.css({
 		'position': 'fixed',
 		'top': hometop,
 		'right': '2.5%'
-		});	
-		} 
-		
+		});
+		}
+
 		if  (newsscrolltop > instascrolltop) {
 		insta.css({
 		'position': 'relative',
@@ -99,26 +99,26 @@ if (windowWidth > 768) {
 		'right': '0'
 		});
 		}
-	
+
 	});
 	//end scroll function
-	
+
 	//begin scrollorama
 	var scrollorama = $.scrollorama({
         blocks:'.block'
-	}); 
+	});
 	scrollorama.animate('#liars',{
 		delay: 0, duration: 800, property:'left', start:0, end: -700, easing:'easeInQuad'
 	})
 	scrollorama.animate('#mess',{
-		delay: 0, duration: 800, property:'right', start:0, end: -700, easing:'easeInQuad' 
+		delay: 0, duration: 800, property:'right', start:0, end: -700, easing:'easeInQuad'
 	})
 	//end scrollorama
-	
+
 }
 //end browser
 
-	
+
 //begin Instagram feed
     var userFeed = new Instafeed({
         get: 'user',
