@@ -35,6 +35,8 @@ $('.block img').css('margin-top',-(blockimgheight/2));
 
 //begin tourbox
 tourbtn.click(function () {
+	windowWidth = $(window).width();
+	windowHeight = $(window).height();
     tour.fadeIn( "slow" );
     body.css('overflow','hidden');
     if (windowWidth > 768) {
@@ -56,6 +58,10 @@ $('.promo iframe').attr('height', '100%').attr('width', '100%');
 
 var instaHeight = insta.width();
 console.log('insta' + instaHeight);
+
+var resizeElems = function() {
+	windowWidth = $(window).width();
+	windowHeight = $(window).height();
 
 //begin mobile
 if (windowWidth < 768) {
@@ -120,6 +126,13 @@ if (windowWidth > 768) {
 
 }
 //end browser
+}
+
+resizeElems();
+
+$(window).on('resize', function() {
+	resizeElems();
+});
 
 
 //begin Instagram feed

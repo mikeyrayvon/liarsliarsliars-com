@@ -30,10 +30,12 @@ $(function() {
 	var coverheight = 0;
 
 //position wrapper
-//wrapper.css({'margin-top':hometop}); 
+//wrapper.css({'margin-top':hometop});
 
 //begin tourbox
 tourbtn.click(function () {
+		windowWidth = $(window).width();
+		windowHeight = $(window).height();
     tour.fadeIn( "slow" );
     body.css('overflow','hidden');
     if (windowWidth > 768) {
@@ -53,21 +55,28 @@ tourclose.click(function () {
 
 $('.album-video iframe').attr('height', '100%').attr('width', '100%');
 
-if (windowWidth < 768) {
+var resizeElems = function() {
+	windowWidth = $(window).width();
+	windowHeight = $(window).height();
+	if (windowWidth < 768) {
+		$(".album-spotify").contents().find("#outerWidgetContainer").css('width','100%');
+			$('.album-spotify iframe').attr('width','100%');
+		}
 
-	$(".album-spotify").contents().find("#outerWidgetContainer").css('width','100%');
-		$('.album-spotify iframe').attr('width','100%');
-		console.log('done');
-	}
-if (windowWidth > 769) {
-		console.log('done2');
-	}
-if (windowWidth > 1024) {
+	if (windowWidth > 1024) {
 		$('.album-video').css('height', (windowHeight*0.7)+40);
 		coverheight = $('.wp-post-image').height();
-		console.log(coverheight);
-
+	} else {
+		$('.album-video').css('height', 'auto');
 	}
+}
+
+resizeElems();
+
+$(window).on('resize', function() {
+	resizeElems();
+});
+
 
 
 	// SVG fallback

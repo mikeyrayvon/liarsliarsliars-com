@@ -746,9 +746,9 @@ article.video {
 	position: relative;
 	}
 	.album-video {
-		width: 45%;
+		width: auto;
 		float: right;
-		height: 380px;
+		height: auto;
 		padding: 20px;
 		}
 	section.single-discog article .page-title {

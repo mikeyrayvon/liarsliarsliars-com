@@ -28,10 +28,12 @@ $(function() {
 	var hometop = 100;
 
 //position wrapper
-//wrapper.css({'margin-top':hometop}); 
+//wrapper.css({'margin-top':hometop});
 
 //begin tourbox
 tourbtn.click(function () {
+	windowWidth = $(window).width();
+	windowHeight = $(window).height();
     tour.fadeIn( "slow" );
     body.css('overflow','hidden');
     if (windowWidth > 768) {
@@ -49,11 +51,22 @@ tourclose.click(function () {
 });
 //end tourbox
 
-if (windowHeight < 480) {
+var resizeElems = function() {
+	windowWidth = $(window).width();
+	windowHeight = $(window).height();
+
+	if (windowHeight < 480) {
 		$('.video-embed iframe').attr('height', windowHeight*0.5).attr('width', '100%');
 	} else {
 		$('.video-embed iframe').attr('height', windowHeight*0.7).attr('width', '100%');
 	}
+}
+
+resizeElems();
+
+$(window).on('resize', function() {
+	resizeElems();
+});
 
 
 	// SVG fallback
