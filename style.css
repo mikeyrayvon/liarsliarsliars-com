@@ -893,7 +893,7 @@ article.video {
 @media only screen and (min-width:1140px) {
 
 }
-@media only screen and (min-width:1280px) {
+@media only screen and (min-width:1500px) {
 	.home-video iframe {
 		width: 1280px;
 		height: 720px;
