@@ -1,4 +1,14 @@
-<?php /* Template Name: Homepage */ get_header(); ?>
+<?php
+/* Template Name: Homepage */
+
+$query = $_SERVER['QUERY_STRING'];
+if ($query != 'home') {
+  header("Location: https://www.musicglue.com/liarsliarsliars");
+  die();
+}
+
+get_header();
+?>
 
 <?php if(get_field('bgimg')): ?>
 <style>
