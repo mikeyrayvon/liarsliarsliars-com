@@ -44,11 +44,13 @@
 		<nav class="nav" role="navigation">
 			<div class="menu">
 				<ul>
-					<li><h1 id="site-title"><a href="<?php echo home_url(); ?>">LIARS</a></h1></li>
+					<li><h1 id="site-title"><a href="<?php echo home_url(); ?>?home">LIARS</a></h1></li>
 					<li><a id="tourbtn">TOUR</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/?page_id=25">DISCOG</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/?page_id=14">VIDEO</a></li>
-					<li><a href="http://liars.inktankmerch.com/" target="_blank">SHOP</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/discography">DISCOG</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/video">VIDEO</a></li>
+					<li><a href="https://www.musicglue.com/liarsliarsliars" target="_blank">MUSIC</a></li>
+          <li><a href="https://liars.backstreetmerch.com/" target="_blank">MERCH</a></li>
+          <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>
 					<span id="navsoc">
 					<li><a href="https://www.facebook.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.png" /></a></li>
 					<li><a href="https://twitter.com/LiarsOfficial" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social/twitter.png" /></a></li>

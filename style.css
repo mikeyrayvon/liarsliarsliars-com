@@ -253,15 +253,15 @@ main {
 	}
 
 .nav li a:link, a#tourbtn {
-	font-size: 24px;
+	font-size: 20px;
 	color: #111;
-	padding: 10px 20px;
+	padding: 10px 16px;
 	background: #fdfdfd;
 	border-bottom: 4px solid #111;
 	cursor: pointer;
 }
 nav ul li a img {
-	height: 20px;
+	height: 16px;
 	vertical-align: initial;
 	margin-bottom: -1px;
 }
@@ -757,7 +757,7 @@ article.video {
 	}
 
 }
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:900px) {
 	body {
 
 		}
@@ -882,10 +882,16 @@ article.video {
 		}
 
 }
-@media only screen and (max-width:560px) {
+@media only screen and (max-width:720px) {
 	.nav span#navsoc {
 		display: none;
 		}
+  .nav li {
+    padding-top: 20px;
+  }
+  .nav li a:link, a#tourbtn {
+		font-size: 18px;
+  }
 }
 @media only screen and (max-width:480px) {
 
