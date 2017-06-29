@@ -1,11 +1,12 @@
 <?php
 /* Template Name: Homepage */
-
-$query = $_SERVER['QUERY_STRING'];
-if ($query != 'home') {
+/*
+$sub = array_shift((explode(".",'sub.liarsliarsliars.com/')));
+print_r($sub); die;
+if ($sub == 'home') {
   header("Location: https://www.musicglue.com/liarsliarsliars");
   die();
-}
+}*/
 
 get_header();
 ?>
