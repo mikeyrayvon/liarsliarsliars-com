@@ -44,7 +44,7 @@
 		<nav class="nav" role="navigation">
 			<div class="menu">
 				<ul>
-					<li><h1 id="site-title"><a href="<?php echo home_url(); ?>?home">LIARS</a></h1></li>
+					<li><h1 id="site-title"><a href="<?php echo home_url(); ?>">LIARS</a></h1></li>
 					<li><a id="tourbtn">TOUR</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/discography">DISCOG</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/video">VIDEO</a></li>
